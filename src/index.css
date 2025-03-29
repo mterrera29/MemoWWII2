@@ -1,0 +1,23 @@
+:root {
+  --backcolor: #141c26;
+  --bordercolor: #21404a;
+  --titlecolor: #64ccb2;
+  --backbutton: #2b8057;
+  --backbuttonhover: #37a570;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--backcolor);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url('../public/cruel-war-scenes-digital-painting.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
