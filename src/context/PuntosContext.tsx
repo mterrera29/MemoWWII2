@@ -1,8 +1,14 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, ReactNode } from 'react';
 
-export const PuntosContext = createContext(null);
+type PuntosContextType = [number, React.Dispatch<React.SetStateAction<number>>];
 
-export const PuntosProvider = ({ children }) => {
+export const PuntosContext = createContext<PuntosContextType | null>(null);
+
+type PuntosProviderProps = {
+  children: ReactNode;
+};
+
+export const PuntosProvider = ({ children }: PuntosProviderProps) => {
   const [puntosTotal, setPuntosTotal] = useState(0);
 
   return (

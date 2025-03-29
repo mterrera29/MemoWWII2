@@ -1,24 +1,25 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import './Memotest3.css';
 
 import { Link } from 'react-router-dom';
 
-import { PuntosContext } from '../../context/PuntosContext.tsx';
-import casco from '../../images/sombrero-militar2.png';
-
-import images from '../data1.ts';
-import styles from './Memotest3.module.css';
-import Button from '../Button/Button.tsx';
+import img from '../data1.ts';
+import { Image } from '../../types/index.ts';
+import Images from './Images.tsx';
+import { usePointsStore } from '../../store.ts';
+import ModalCorrect from './ModalCorrect.tsx';
 
 const Memotest3 = () => {
-  const [puntosTotal, setPuntosTotal] = useContext(PuntosContext);
-  const [guessed, setGuessed] = useState([]);
-  const [lastGuessed, setLastGuessed] = useState([]);
-  const [selected, setSelected] = useState([]);
+  const { puntosTotal, setPuntosTotal } = usePointsStore();
+  const [guessed, setGuessed] = useState<Image[]>([]);
+  const [lastGuessed, setLastGuessed] = useState<Image[]>([]);
+  const [selected, setSelected] = useState<Image[]>([]);
   const [correct, setCorrect] = useState(false);
-  const [win, setWin] = useState(false);
-  const [puntos, setPuntos] = useState(6);
+  const [win, setWin] = useState<boolean>(false);
+  const [puntos, setPuntos] = useState<number>(6);
   const [puntosCounter, setPuntosCounter] = useState(0);
+
+  const images: Image[] = img;
 
   const saveLocal = () => {
     localStorage.setItem('puntos', JSON.stringify(puntosTotal + puntosCounter));
@@ -45,7 +46,7 @@ const Memotest3 = () => {
   useEffect(() => {
     if (selected.length === 2) {
       if (selected[0].check !== selected[1].check) {
-        puntos > 1 ? setPuntos(puntos - 1) : setPuntos(1);
+        setPuntos((prev) => (prev > 1 ? prev - 1 : 1));
       } else if (
         selected[0].check === selected[1].check &&
         selected[0].id !== selected[1].id
@@ -67,89 +68,26 @@ const Memotest3 = () => {
       <main className='memoMain'>
         <div className='center'>
           <h2>Nivel 1</h2>
-          <ul className='container3'>
-            {images.map((image, index) => (
-              <li
-                key={image.id}
-                className={`card ${
-                  (selected.includes(image) && `card2`) ||
-                  (guessed.includes(image) && `card2`)
-                }`}
-                onClick={() =>
-                  !guessed.includes(image) &&
-                  selected.length < 2 &&
-                  setSelected((selected) => selected.concat(image))
-                }
-              >
-                <div
-                  className='face front'
-                  style={
-                    guessed.includes(image)
-                      ? { border: 'solid 1px green', borderRadius: '12px' }
-                      : {
-                          border: 'solid 1px var(--bordercolor)',
-                          borderRadius: '12px',
-                        }
-                  }
-                >
-                  <img alt='' className='imgMemo' src={image.img} />
-                  <h3>{image.name}</h3>
-                </div>
-                <div
-                  className='face back'
-                  style={
-                    guessed.includes(image)
-                      ? { border: 'solid 1px green', borderRadius: '12px' }
-                      : {
-                          border: 'solid 1px var(--bordercolor)',
-                          borderRadius: '12px',
-                        }
-                  }
-                >
-                  <img key={index} alt='' className='imgMemo' src={casco} />
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Images
+            images={images}
+            selected={selected}
+            guessed={guessed}
+            setSelected={setSelected}
+          />
           <div className='puntosContainer'>
             <h2>{`Puntos: ${puntosCounter} Pts`}</h2>
           </div>
-          <div className='puntosContainer'>
-            <h3>{selected.length >= 1 ? selected[0].name : ' '}</h3>
-            <h3>{selected.length >= 2 ? selected[1].name : ' '}</h3>
-          </div>
         </div>
         {correct === true && (
-          <div className='modalContainer'>
-            <div className='modalOscuro' />
-            <div className='modal'>
-              <h1 className='modalPts'>{`+ ${puntos} pts`}</h1>
-              <img
-                alt=''
-                className='modalBandera'
-                src={lastGuessed[0].bandera}
-              />
-              <div>
-                <h2>¡Correcto!</h2>
-                <h1 className='modalNombre'>{lastGuessed[0].name2}</h1>
-                <div className='modalInfo'>
-                  <img alt='' src={lastGuessed[0].img} />
-                  <div>
-                    <p>{lastGuessed[0].info}</p>
-                    <div
-                      onClick={() => {
-                        setCorrect(false);
-                        setPuntos(6);
-                        guessed.length === images.length && setWin(true);
-                      }}
-                    >
-                      <Button>Continuar</Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <ModalCorrect
+            puntos={puntos}
+            lastGuessed={lastGuessed}
+            setCorrect={setCorrect}
+            setPuntos={setPuntos}
+            setWin={setWin}
+            guessed={guessed}
+            images={images}
+          />
         )}
         {win === true && (
           <div className='modalContainer'>
