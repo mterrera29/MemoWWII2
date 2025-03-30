@@ -8,6 +8,7 @@ import { Image } from '../../types/index.ts';
 import Images from './Images.tsx';
 import { usePointsStore } from '../../store.ts';
 import ModalCorrect from './ModalCorrect.tsx';
+import Button from '../Button/Button.tsx';
 
 const Memotest3 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
@@ -99,15 +100,15 @@ const Memotest3 = () => {
                   <h2>{`Nivel 1: ${puntosCounter} pts`}</h2>
                 </div>
                 <h1>{`Total: ${puntosTotal} pts`}</h1>
-                <Link to='/nivel2'>
-                  <button
+                <Link to='/nivel2' style={{ textDecoration: 'none' }}>
+                  <div
                     style={{ fontSize: '20px', margin: '10px' }}
                     onClick={() => {
                       setWin(false);
                     }}
                   >
-                    Continuar al Nivel 2
-                  </button>
+                    <Button>{'Continuar al Nivel 2'}</Button>
+                  </div>
                 </Link>
               </div>
             </div>
