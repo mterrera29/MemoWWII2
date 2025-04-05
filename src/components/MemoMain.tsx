@@ -1,17 +1,15 @@
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import { PuntosContext } from '../context/PuntosContext';
-import casco from '../images/sombrero-militar2.png';
 
 import styles from './MemoMain.module.css';
 import ModalMemoMain from './MemoMain/ModalMemoMain';
 import Button from './Button/Button';
 import Header from './Header/Header';
+import { usePointsStore } from '../store';
 const Main = () => {
   const [correct, setCorrect] = useState(false);
-  const [puntosTotal, setPuntosTotal] = useContext(PuntosContext);
-  const puntosPartida = JSON.parse(localStorage.getItem('puntos'));
+  const setPuntosTotal = usePointsStore((state) => state.setPuntosTotal);
+  const puntosPartida = usePointsStore((state) => state.puntosPartida);
 
   return (
     <div>
@@ -60,7 +58,7 @@ const Main = () => {
                   textAlign: 'center',
                 }}
               >
-                <h2>Ultima partida: {puntosPartida} Pts. </h2>
+                <h2>Última partida: {puntosPartida} Pts. </h2>
                 <Link style={{ textDecoration: 'none' }} to='/nivel1'>
                   <div
                     style={{
