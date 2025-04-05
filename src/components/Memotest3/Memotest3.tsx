@@ -8,7 +8,7 @@ import { usePointsStore } from '../../store.ts';
 import ModalCorrect from './ModalCorrect.tsx';
 import Modal from '../Modal/Modal.tsx';
 import styles from './Memotest3.module.css';
-import ModalWin from '../ModalWin/ModalWIn.tsx';
+import ModalWin from '../ModalWin/ModalWin.tsx';
 import Header from '../Header/Header.tsx';
 
 const Memotest3 = () => {

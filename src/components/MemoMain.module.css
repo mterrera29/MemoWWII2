@@ -43,3 +43,13 @@
   padding-right: 10px;
   text-transform: uppercase;
 }
+.mainTitle {
+  font-size: 30px;
+  font-weight: 'bold';
+  color: white;
+  padding-bottom: 5;
+  border-bottom: solid;
+  border-bottom-width: 2;
+  border-bottom-color: var(--backbutton);
+  margin: 0;
+}

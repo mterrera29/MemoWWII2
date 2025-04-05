@@ -36,11 +36,13 @@ const Main = () => {
             }}
           >
             <h2
-              style={{ fontSize: '28px', margin: '10px', textAlign: 'center' }}
+              style={{ fontSize: '28px', textAlign: 'center' }}
+              className={styles.mainTitle}
             >
-              Lideres de la Segunda Guerra Mundial
+              Líderes de la Segunda Guerra Mundial
             </h2>
             <div
+              style={{ marginTop: '10px' }}
               onClick={() => {
                 setCorrect(true);
                 setPuntosTotal(0);
