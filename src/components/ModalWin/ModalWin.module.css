@@ -1,0 +1,50 @@
+.modalWin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  height: min-content;
+  margin: 10px;
+  background-color: var(--backcolor);
+  border-radius: 15px;
+  border: solid 1px var(--bordercolor);
+  z-index: 3;
+  padding: 15px;
+}
+.modalWinH1 {
+  font-size: 60px;
+  color: var(--titlecolor);
+  margin-bottom: 20px;
+}
+.modalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  line-height: 5px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 700px) {
+  .modalWin {
+    width: 95%;
+    height: auto;
+  }
+  .modalWinH1 {
+    font-size: 60px;
+  }
+  .modalInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 13px;
+  }
+  .modalInfo img {
+    width: 230px;
+    height: auto;
+    border-radius: 14px;
+  }
+}

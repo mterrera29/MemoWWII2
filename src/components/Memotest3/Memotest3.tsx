@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import './Memotest3.css';
 
-import { Link } from 'react-router-dom';
-
 import img from '../data1.ts';
 import { Image } from '../../types/index.ts';
 import Images from './Images.tsx';
 import { usePointsStore } from '../../store.ts';
 import ModalCorrect from './ModalCorrect.tsx';
-import Button from '../Button/Button.tsx';
+import Modal from '../Modal/Modal.tsx';
+import styles from './Memotest3.module.css';
+import ModalWin from '../ModalWin/ModalWIn.tsx';
 
 const Memotest3 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
@@ -66,8 +66,8 @@ const Memotest3 = () => {
 
   return (
     <div>
-      <main className='memoMain'>
-        <div className='center'>
+      <main>
+        <div className={styles.center}>
           <h2>Nivel 1</h2>
           <Images
             images={images}
@@ -75,7 +75,7 @@ const Memotest3 = () => {
             guessed={guessed}
             setSelected={setSelected}
           />
-          <div className='puntosContainer'>
+          <div className={styles.puntosContainer}>
             <h2>{`Puntos: ${puntosCounter} Pts`}</h2>
           </div>
         </div>
@@ -91,28 +91,13 @@ const Memotest3 = () => {
           />
         )}
         {win === true && (
-          <div className='modalContainer'>
-            <div className='modalOscuro' />
-            <div className='modalWin'>
-              <div>
-                <h1 className='modalWinH1'>¡Ganaste!</h1>
-                <div className='modalInfo'>
-                  <h2>{`Nivel 1: ${puntosCounter} pts`}</h2>
-                </div>
-                <h1>{`Total: ${puntosTotal} pts`}</h1>
-                <Link to='/nivel2' style={{ textDecoration: 'none' }}>
-                  <div
-                    style={{ fontSize: '20px', margin: '10px' }}
-                    onClick={() => {
-                      setWin(false);
-                    }}
-                  >
-                    <Button>{'Continuar al Nivel 2'}</Button>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Modal>
+            <ModalWin
+              puntosTotal={puntosTotal}
+              puntosCounter={puntosCounter}
+              setWin={setWin}
+            />
+          </Modal>
         )}
       </main>
     </div>

@@ -24,90 +24,103 @@ const Main = () => {
             textAlign: 'center',
           }}
         >
-          <header
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              justifyContent: 'center',
-              alignItems: 'center',
-              textAlign: 'center',
-            }}
-          >
-            <img alt='' className={styles.imgMemoM} src={casco} />
-            <h1>MEMO WWII</h1>
-            <img alt='' className={styles.imgMemoM} src={casco} />
-          </header>
-          <h2 style={{ fontSize: '28px', margin: '10px', textAlign: 'center' }}>
-            Lideres de la Segunda Guerra Mundial
-          </h2>
           <div
-            onClick={() => {
-              setCorrect(true);
-              setPuntosTotal(0);
+            style={{
+              backgroundColor: '#21404ac4',
+              borderRadius: '30px',
+              marginLeft: '5px',
+              marginRight: '5px',
+              padding: '10px',
+              border: '2px solid var(--bordercolor)',
             }}
           >
-            <Button>Comenzar</Button>
-          </div>
-          {puntosPartida ? (
-            <div
+            <header
               style={{
                 display: 'flex',
-                flexDirection: 'column',
+                flexDirection: 'row',
                 justifyContent: 'center',
                 alignItems: 'center',
                 textAlign: 'center',
               }}
             >
-              <h2>Ultima partida: {puntosPartida} Pts. </h2>
-              <Link to='/nivel1'>
-                <button
-                  style={{
-                    fontSize: '16px',
-                    margin: '10px',
-                    padding: '5px',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => {
-                    setPuntosTotal(0);
-                  }}
-                >
-                  Jugar Nivel 1
-                </button>
-              </Link>
-              <Link to='/nivel2'>
-                <button
-                  style={{
-                    fontSize: '16px',
-                    margin: '10px',
-                    padding: '5px',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => {
-                    setPuntosTotal(0);
-                  }}
-                >
-                  Jugar Nivel 2
-                </button>
-              </Link>
-              <Link to='/nivel3'>
-                <button
-                  style={{
-                    fontSize: '16px',
-                    margin: '10px',
-                    padding: '5px',
-                    cursor: 'pointer',
-                  }}
-                  onClick={() => {
-                    setPuntosTotal(0);
-                  }}
-                >
-                  Jugar Nivel 3
-                </button>
-              </Link>
+              <img alt='' className={styles.imgMemoM} src={casco} />
+              <h1>MEMO WWII</h1>
+              <img alt='' className={styles.imgMemoM} src={casco} />
+            </header>
+            <h2
+              style={{ fontSize: '28px', margin: '10px', textAlign: 'center' }}
+            >
+              Lideres de la Segunda Guerra Mundial
+            </h2>
+            <div
+              onClick={() => {
+                setCorrect(true);
+                setPuntosTotal(0);
+              }}
+            >
+              <Button>Comenzar</Button>
             </div>
-          ) : (
-            <div />
-          )}
+            {puntosPartida ? (
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  textAlign: 'center',
+                }}
+              >
+                <h2>Ultima partida: {puntosPartida} Pts. </h2>
+                <Link style={{ textDecoration: 'none' }} to='/nivel1'>
+                  <div
+                    style={{
+                      fontSize: '16px',
+                      margin: '10px',
+                      padding: '5px',
+                      cursor: 'pointer',
+                    }}
+                    onClick={() => {
+                      setPuntosTotal(0);
+                    }}
+                  >
+                    <Button>Jugar Nivel 1</Button>
+                  </div>
+                </Link>
+                <Link to='/nivel2' style={{ textDecoration: 'none' }}>
+                  <div
+                    style={{
+                      fontSize: '16px',
+                      margin: '10px',
+                      padding: '5px',
+                      cursor: 'pointer',
+                    }}
+                    onClick={() => {
+                      setPuntosTotal(0);
+                    }}
+                  >
+                    <Button>Jugar Nivel 2</Button>
+                  </div>
+                </Link>
+                <Link to='/nivel3' style={{ textDecoration: 'none' }}>
+                  <div
+                    style={{
+                      fontSize: '16px',
+                      margin: '10px',
+                      padding: '5px',
+                      cursor: 'pointer',
+                    }}
+                    onClick={() => {
+                      setPuntosTotal(0);
+                    }}
+                  >
+                    <Button>Jugar Nivel 3</Button>
+                  </div>
+                </Link>
+              </div>
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
         {correct === true && <ModalMemoMain />}
       </main>
