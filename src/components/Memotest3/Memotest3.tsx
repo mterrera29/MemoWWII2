@@ -9,6 +9,7 @@ import ModalCorrect from './ModalCorrect.tsx';
 import Modal from '../Modal/Modal.tsx';
 import styles from './Memotest3.module.css';
 import ModalWin from '../ModalWin/ModalWIn.tsx';
+import Header from '../Header/Header.tsx';
 
 const Memotest3 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
@@ -67,6 +68,7 @@ const Memotest3 = () => {
   return (
     <div>
       <main>
+        <Header />
         <div className={styles.center}>
           <h2>Nivel 1</h2>
           <Images

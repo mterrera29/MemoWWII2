@@ -7,6 +7,7 @@ import casco from '../images/sombrero-militar2.png';
 import styles from './MemoMain.module.css';
 import ModalMemoMain from './MemoMain/ModalMemoMain';
 import Button from './Button/Button';
+import Header from './Header/Header';
 const Main = () => {
   const [correct, setCorrect] = useState(false);
   const [puntosTotal, setPuntosTotal] = useContext(PuntosContext);
@@ -15,6 +16,7 @@ const Main = () => {
   return (
     <div>
       <main className={styles.memoMain}>
+        <Header />
         <div
           style={{
             display: 'flex',
@@ -22,6 +24,7 @@ const Main = () => {
             justifyContent: 'center',
             alignItems: 'center',
             textAlign: 'center',
+            height: '100%',
           }}
         >
           <div
@@ -34,19 +37,6 @@ const Main = () => {
               border: '2px solid var(--bordercolor)',
             }}
           >
-            <header
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-              }}
-            >
-              <img alt='' className={styles.imgMemoM} src={casco} />
-              <h1>MEMO WWII</h1>
-              <img alt='' className={styles.imgMemoM} src={casco} />
-            </header>
             <h2
               style={{ fontSize: '28px', margin: '10px', textAlign: 'center' }}
             >
