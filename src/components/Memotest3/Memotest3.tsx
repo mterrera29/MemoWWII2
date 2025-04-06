@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import './Memotest3.css';
 
 import img from '../data1.ts';
 import { Image } from '../../types/index.ts';

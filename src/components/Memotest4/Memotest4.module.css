@@ -1,0 +1,110 @@
+.container2 {
+  margin: 40px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    '. . '
+    '. . '
+    '. . ';
+}
+.containerTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .modalOscuro2 {
+    height: 100%;
+  }
+  .containerTitle {
+    display: none;
+  }
+  .container2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    grid-template-areas:
+      '. '
+      '. '
+      '. '
+      '. '
+      '. '
+      '. ';
+  }
+  .puntosContainer h3 {
+    display: inline-block;
+    height: 50px;
+    width: 110px;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+  .card2 {
+    width: 100px;
+    height: 100px;
+  }
+  .front h3 {
+    font-size: 16px;
+    line-height: 15px;
+  }
+  .modal2 {
+    width: 95%;
+    height: 95%;
+  }
+  .modalWin2 {
+    width: 95%;
+  }
+  .modalWinH1 {
+    font-size: 60px;
+    color: rgb(72, 187, 72);
+  }
+  .modal h2 {
+    font-size: 20px;
+  }
+  .modalNombre2 {
+    font-size: 30px;
+    border-bottom: solid 0px #666;
+  }
+
+  .modalInfo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px;
+  }
+  .modalInfo2 img {
+    width: 200px;
+    height: auto;
+    border-radius: 14px;
+  }
+  .modalInfo2 div p {
+    margin: 10px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .modalPts2 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: rgb(248, 248, 98);
+    font-size: 25px;
+  }
+  .modalBandera2 {
+    width: 50px;
+    height: auto;
+  }
+  .modalBtn2 {
+    font-size: 20px;
+    padding: 5px;
+  }
+}

@@ -4,12 +4,12 @@ import Button from '../Button/Button';
 
 export default function ModalMemoMain() {
   return (
-    <div className='modalContainer'>
+    <div className={styles.modalContainer}>
       <div className={styles.modalOscuro} />
       <div className={styles.modal}>
         <div>
           <p className={styles.modalTitle}>¡Atención!</p>
-          <div className='modalInfo'>
+          <div className={styles.modalInfo}>
             <div>
               <p>
                 Recuerda los rostros , nombres y apellidos de los lideres más

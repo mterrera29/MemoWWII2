@@ -1,3 +1,14 @@
+.modalContainer {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .modalOscuro {
   top: 0px;
   bottom: 0px;
@@ -17,7 +28,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 60%;
+  width: 40%;
   height: min-content;
   margin: 10px;
   z-index: 100;
@@ -40,8 +51,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  line-height: 5px;
+  line-height: 25px;
   margin: 10px;
+}
+.modalInfo img {
+  width: 250px;
+  height: auto;
+  border-radius: 14px;
+}
+.modalInfo p {
+  margin: 20px;
+  font-size: 25px;
 }
 .modalButton {
   background-color: var(--backbutton);

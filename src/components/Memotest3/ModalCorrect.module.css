@@ -1,0 +1,105 @@
+.modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  height: min-content;
+  background-color: var(--backcolor);
+  border-radius: 15px;
+  border: solid 1px var(--bordercolor);
+  margin: 10px;
+  z-index: 3;
+}
+.modalPts {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: rgb(248, 248, 98);
+}
+.modalBandera {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100px;
+  height: auto;
+}
+.modal h2 {
+  font-size: 40px;
+  color: rgb(72, 187, 72);
+}
+.modalNombre {
+  border-bottom: solid 1px var(--bordercolor);
+  color: var;
+}
+.modalInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+}
+.modalInfo img {
+  width: 250px;
+  height: auto;
+  border-radius: 14px;
+}
+.modalInfo p {
+  margin: 20px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 700px) {
+  .modal {
+    width: 95%;
+    height: 95%;
+  }
+  .modalWin {
+    width: 95%;
+    height: auto;
+  }
+  .modalWinH1 {
+    font-size: 60px;
+    color: rgb(72, 187, 72);
+  }
+  .modal div h2 {
+    font-size: 25px;
+  }
+  .modalNombre {
+    font-size: 30px;
+    border-bottom: solid 0px var(--bordercolor);
+  }
+
+  .modalInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 13px;
+  }
+  .modalInfo img {
+    width: 230px;
+    height: auto;
+    border-radius: 14px;
+  }
+  .modalInfo p {
+    margin: 10px;
+    font-size: 23px;
+    line-height: 25px;
+  }
+  .modalPts {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: rgb(248, 248, 98);
+    font-size: 30px;
+  }
+  .modalBandera {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 80px;
+    height: auto;
+  }
+}
