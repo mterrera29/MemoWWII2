@@ -5,7 +5,7 @@ type ButtonProps = {
 export default function Button({ children }: ButtonProps) {
   return (
     <div className={styles.button}>
-      <div className={styles.buttonText}>{children} </div>
+      <div className={styles.buttonText}>{children}</div>
     </div>
   );
 }

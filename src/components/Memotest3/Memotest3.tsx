@@ -94,6 +94,7 @@ const Memotest3 = () => {
         {win === true && (
           <Modal>
             <ModalWin
+              level={1}
               puntosTotal={puntosTotal}
               puntosCounter={puntosCounter}
               setWin={setWin}

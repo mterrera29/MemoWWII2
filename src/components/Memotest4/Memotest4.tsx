@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 import styles from './Memotest4.module.css';
 
@@ -9,6 +8,8 @@ import { Image2 } from '../../types';
 import Images from './Images';
 import ModalCorrect from './ModalCorrect';
 import Header from '../Header/Header';
+import Modal from '../Modal/Modal';
+import ModalWIn from '../ModalWin/ModalWin';
 const Memotest4 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
   const [guessed, setGuessed] = useState<Image2[]>([]);
@@ -66,12 +67,10 @@ const Memotest4 = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <Header />
-      <h2>Nivel 2</h2>
+      <div>
+        <h2>Nivel 2</h2>
+      </div>
       <main>
-        <div className={styles.containerTitle}>
-          <h1>Lider</h1>
-          <h1>País</h1>
-        </div>
         <div
           style={{
             display: 'flex',
@@ -81,14 +80,26 @@ const Memotest4 = () => {
           }}
         >
           {lider.map((images, index) => (
-            <ul key={`group-${index}`} className={styles.container2}>
-              <Images
-                images={images}
-                selected={selected}
-                guessed={guessed}
-                setSelected={setSelected}
-              />
-            </ul>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <div className={styles.containerTitle}>
+                <h1>{index === 0 ? 'Lider' : 'País'}</h1>
+              </div>
+              <ul key={`group-${index}`} className={styles.container2}>
+                <Images
+                  images={images}
+                  selected={selected}
+                  guessed={guessed}
+                  setSelected={setSelected}
+                />
+              </ul>
+            </div>
           ))}
         </div>
         {correct === true && (
@@ -102,33 +113,17 @@ const Memotest4 = () => {
           />
         )}
         {win === true && (
-          <div className='modalContainer2'>
-            <div className='modalOscuro2' />
-            <div className='modalWin2'>
-              <div>
-                <h1 style={{ color: 'rgb(72, 187, 72)', fontSize: '60px' }}>
-                  ¡Ganaste!
-                </h1>
-                <div className='modalInfo2'>
-                  <h2>{`Total: ${puntosCounter} pts`}</h2>
-                </div>
-                <h1>{`Total: ${puntosTotal} pts`}</h1>
-                <Link to='/nivel3'>
-                  <button
-                    style={{ fontSize: '20px', padding: '5px', margin: '10px' }}
-                    onClick={() => {
-                      setWin(false);
-                    }}
-                  >
-                    Continuar al Nivel 3
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <Modal>
+            <ModalWIn
+              level={2}
+              puntosTotal={puntosTotal}
+              puntosCounter={puntosCounter}
+              setWin={setWin}
+            />
+          </Modal>
         )}
         <div>
-          <h1>{`Puntos: ${puntosCounter} pts`}</h1>
+          <h2>{`Puntos: ${puntosCounter} pts`}</h2>
         </div>
       </main>
     </div>
