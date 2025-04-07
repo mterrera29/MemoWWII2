@@ -129,7 +129,7 @@ const Memotest5 = () => {
                 }}
                 onClick={() => handlePistas()}
               >
-                <Button>Solicitar pista</Button>
+                <Button>Pistas</Button>
               </button>
               <form onSubmit={handleSubmit}>
                 <input
