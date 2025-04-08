@@ -58,6 +58,20 @@ const Memotest5 = () => {
       <main className={styles.main3}>
         <h2>Nivel 3</h2>
         <div className={styles.imagenContainer}>
+          <button
+            style={{
+              all: 'unset',
+              cursor: 'pointer',
+              marginLeft: '5px',
+              marginBottom: '5px',
+              position: 'absolute',
+              bottom: '0',
+              left: '0',
+            }}
+            onClick={() => handlePistas()}
+          >
+            <Button>Pistas</Button>
+          </button>
           <h1
             className={styles.titulo}
             style={{ color: correct ? 'rgb(72, 187, 72)' : 'black' }}
@@ -99,7 +113,7 @@ const Memotest5 = () => {
               }}
             >
               <button
-                style={{ fontSize: '16px', margin: '10px', padding: '5px' }}
+                style={{ all: 'unset', cursor: 'pointer', marginLeft: '10px' }}
                 onClick={() => {
                   if (index === 5) {
                     setWin(true);
@@ -113,7 +127,7 @@ const Memotest5 = () => {
                   setPuntos(6);
                 }}
               >
-                Continuar
+                <Button>Continuar</Button>
               </button>
               <h2 className={styles.modalPts3}>
                 {correct && `+ ${puntos} pts`}
@@ -121,16 +135,6 @@ const Memotest5 = () => {
             </div>
           ) : (
             <div style={{ display: 'flex' }}>
-              <button
-                style={{
-                  all: 'unset',
-                  cursor: 'pointer',
-                  marginRight: '10px',
-                }}
-                onClick={() => handlePistas()}
-              >
-                <Button>Pistas</Button>
-              </button>
               <form onSubmit={handleSubmit}>
                 <input
                   style={{
