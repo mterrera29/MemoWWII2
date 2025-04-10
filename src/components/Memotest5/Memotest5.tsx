@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 import styles from './Memotest5.module.css';
 
-import { lider } from '../data3';
+import { lider } from '../../data/data3';
 import { usePointsStore } from '../../store';
 import Button from '../Button/Button';
 import Header from '../Header/Header';

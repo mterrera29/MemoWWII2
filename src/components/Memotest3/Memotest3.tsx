@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import img from '../data1.ts';
+import img from '../../data/data1.ts';
 import { Image } from '../../types/index.ts';
 import Images from './Images.tsx';
 import { usePointsStore } from '../../store.ts';
