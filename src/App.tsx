@@ -1,4 +1,3 @@
-import styles from './App.module.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Memotest3 from './components/Memotest3/Memotest3';
