@@ -2,8 +2,8 @@
 
 ¡Bienvenido a **MemoWWII2**, un juego de memoria interactivo diseñado para ayudar a los estudiantes de secundaria a aprender sobre la Segunda Guerra Mundial de manera entretenida y educativa! A través de este juego, los alumnos pueden mejorar su conocimiento sobre eventos históricos clave mientras desarrollan habilidades cognitivas.
 
-| ![Pantalla Principal](./public/img/main.png) | ![Juego](./public/img/game.png) | ![Juego Responsivo](./public/img/game-responsive.png) |
-| -------------------------------------------- | ------------------------------- | ----------------------------------------------------- |
+| ![Pantalla Principal](./public/memo1.png) | ![Juego](./public/memo2.png) | ![Juego Responsivo](./public/memo3.png) |
+| ----------------------------------------- | ---------------------------- | --------------------------------------- |
 
 ## 🚀 Características
 
