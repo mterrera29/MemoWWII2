@@ -5,6 +5,7 @@ import styles from './Memotest5.module.css';
 import { lider } from '../data3';
 import { usePointsStore } from '../../store';
 import Button from '../Button/Button';
+import Header from '../Header/Header';
 
 const Memotest5 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
@@ -56,6 +57,7 @@ const Memotest5 = () => {
   return (
     <div>
       <main className={styles.main3}>
+        <Header />
         <h2>Nivel 3</h2>
         <div className={styles.imagenContainer}>
           <button
@@ -67,6 +69,7 @@ const Memotest5 = () => {
               position: 'absolute',
               bottom: '0',
               left: '0',
+              zIndex: '2',
             }}
             onClick={() => handlePistas()}
           >
@@ -82,7 +85,7 @@ const Memotest5 = () => {
             alt=''
             className={styles.imgLider}
             src={lider[index].img}
-            style={{ filter: correct ? '' : 'brightness(0)' }}
+            style={{ filter: correct ? '' : 'brightness(0)', zIndex: '1' }}
           />
           <h1
             className={styles.nombreLider}

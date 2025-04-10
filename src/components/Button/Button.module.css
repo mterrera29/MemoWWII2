@@ -10,6 +10,7 @@
   text-align: center;
   border: 2px solid transparent;
   transition: 300ms ease;
+  z-index: 1000;
 }
 .button:hover {
   background-color: var(--backbuttonhover);

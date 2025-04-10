@@ -50,63 +50,59 @@ const Main = () => {
             >
               <Button>Comenzar</Button>
             </div>
-            {puntosPartida ? (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  textAlign: 'center',
-                }}
-              >
-                <h2>Última partida: {puntosPartida} Pts. </h2>
-                <Link style={{ textDecoration: 'none' }} to='/nivel1'>
-                  <div
-                    style={{
-                      fontSize: '16px',
-                      padding: '5px',
-                      cursor: 'pointer',
-                    }}
-                    onClick={() => {
-                      setPuntosTotal(0);
-                    }}
-                  >
-                    <Button>Jugar Nivel 1</Button>
-                  </div>
-                </Link>
-                <Link to='/nivel2' style={{ textDecoration: 'none' }}>
-                  <div
-                    style={{
-                      fontSize: '16px',
-                      padding: '5px',
-                      cursor: 'pointer',
-                    }}
-                    onClick={() => {
-                      setPuntosTotal(0);
-                    }}
-                  >
-                    <Button>Jugar Nivel 2</Button>
-                  </div>
-                </Link>
-                <Link to='/nivel3' style={{ textDecoration: 'none' }}>
-                  <div
-                    style={{
-                      fontSize: '16px',
-                      padding: '5px',
-                      cursor: 'pointer',
-                    }}
-                    onClick={() => {
-                      setPuntosTotal(0);
-                    }}
-                  >
-                    <Button>Jugar Nivel 3</Button>
-                  </div>
-                </Link>
-              </div>
-            ) : (
-              <div />
-            )}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+              }}
+            >
+              <h2>Última partida: {puntosPartida} Pts. </h2>
+              <Link style={{ textDecoration: 'none' }} to='/nivel1'>
+                <div
+                  style={{
+                    fontSize: '16px',
+                    padding: '5px',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setPuntosTotal(0);
+                  }}
+                >
+                  <Button>Jugar Nivel 1</Button>
+                </div>
+              </Link>
+              <Link to='/nivel2' style={{ textDecoration: 'none' }}>
+                <div
+                  style={{
+                    fontSize: '16px',
+                    padding: '5px',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setPuntosTotal(0);
+                  }}
+                >
+                  <Button>Jugar Nivel 2</Button>
+                </div>
+              </Link>
+              <Link to='/nivel3' style={{ textDecoration: 'none' }}>
+                <div
+                  style={{
+                    fontSize: '16px',
+                    padding: '5px',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setPuntosTotal(0);
+                  }}
+                >
+                  <Button>Jugar Nivel 3</Button>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
         {correct === true && <ModalMemoMain />}
