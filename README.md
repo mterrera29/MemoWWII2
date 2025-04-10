@@ -1,6 +1,6 @@
-# 🧠 MemoWWII2
+# 🧠 MemoWWII
 
-¡Bienvenido a **MemoWWII2**, un juego de memoria interactivo diseñado para ayudar a los estudiantes de secundaria a aprender sobre la Segunda Guerra Mundial de manera entretenida y educativa! A través de este juego, los alumnos pueden mejorar su conocimiento sobre eventos históricos clave mientras desarrollan habilidades cognitivas.
+¡Bienvenido a **MemoWWII**, un juego de memoria interactivo diseñado para ayudar a los estudiantes de secundaria a aprender sobre la Segunda Guerra Mundial de manera entretenida y educativa! A través de este juego, los alumnos pueden mejorar su conocimiento sobre eventos históricos clave mientras desarrollan habilidades cognitivas.
 
 | ![Pantalla Principal](./public/memo5.png) | ![Juego](./public/memo4.png) | ![Juego Responsivo](./public/memo3.png) |
 | ----------------------------------------- | ---------------------------- | --------------------------------------- |
@@ -18,11 +18,10 @@
 
 ## 🛠️ Tecnologías utilizadas
 
-- **React**: Para una interfaz de usuario dinámica y eficiente.
-- **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
-- **TypeScript**: Añade tipado estático para mejorar la calidad del código.
-- **CSS**: Estiliza la aplicación para una experiencia visual atractiva.
-- **ESLint**: Garantiza un código limpio y consistente.
+- **React**
+- **TypeScript**
+- **CSS Modules**
+- **Zustand**
 
 ## 🎯 Objetivo Educativo
 
