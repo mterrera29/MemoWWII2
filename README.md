@@ -25,6 +25,7 @@
 ## 🛠️ Tecnologías utilizadas
 
 - **React**
+- **Vite**
 - **TypeScript**
 - **CSS Modules**
 - **Zustand**
