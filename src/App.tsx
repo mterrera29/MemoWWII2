@@ -13,10 +13,10 @@ function App() {
       <BrowserRouter>
         <div>
           <Routes>
-            <Route exact element={<MemoMain />} path='/' />
-            <Route exact element={<Memotest3 />} path='/nivel1' />
-            <Route exact element={<Memotest4 />} path='/nivel2' />
-            <Route exact element={<Memotest5 />} path='/nivel3' />
+            <Route element={<MemoMain />} path='/' />
+            <Route element={<Memotest3 />} path='/nivel1' />
+            <Route element={<Memotest4 />} path='/nivel2' />
+            <Route element={<Memotest5 />} path='/nivel3' />
           </Routes>
         </div>
       </BrowserRouter>
