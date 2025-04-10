@@ -12,6 +12,12 @@
 - 📱 **Diseño responsivo**: Compatible con computadoras, tablets y teléfonos móviles.
 - 🎨 **Interfaz amigable**: Diseñado para ser intuitivo y atractivo para estudiantes de secundaria.
 
+## 🧩 Niveles del Juego
+
+- 🔹 **Nivel 1**: Emparejar cartas con los líderes de la Segunda Guerra Mundial.
+- 🔹 **Nivel 2**: Emparejar a cada líder con su respectivo país.
+- 🔹 **Nivel 3**: Adivinar qué líder es a partir de su silueta.
+
 ## 🖥️ Demo en Producción
 
 🔗 [**Accedé a la App**](https://memo-ww2.vercel.app/)
