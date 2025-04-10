@@ -142,6 +142,7 @@ const Memotest5 = () => {
                     height: '40px',
                     borderRadius: '15px',
                     padding: '5px',
+                    backgroundColor: 'var(--backcolor)',
                   }}
                   type='text'
                   onChange={(e) => setName(e.target.value)}
