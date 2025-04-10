@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+
 import styles from './Memotest5.module.css';
 
 import { lider } from '../data3';
 import { usePointsStore } from '../../store';
 import Button from '../Button/Button';
 import Header from '../Header/Header';
+import ModalFinish from '../ModalFinish/ModalFinish';
 
 const Memotest5 = () => {
   const { puntosTotal, setPuntosTotal } = usePointsStore();
@@ -17,10 +18,6 @@ const Memotest5 = () => {
   const [pistas, setPistas] = useState(0);
   const [puntos, setPuntos] = useState(6);
   const [puntosCounter, setPuntosCounter] = useState(0);
-
-  const saveLocal = () => {
-    localStorage.setItem('puntos', JSON.stringify(puntosTotal));
-  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -167,36 +164,12 @@ const Memotest5 = () => {
           <h1>{`Puntos: ${puntosCounter} pts`}</h1>
         </div>
         {win === true && (
-          <div className='modalContainer2'>
-            <div className='modalOscuro2' />
-            <div className='modalWin3'>
-              <div>
-                <h1 style={{ color: 'rgb(72, 187, 72)', fontSize: '60px' }}>
-                  ¡Ganaste el Juego!
-                </h1>
-                <div className='modalInfo2'>
-                  <h2>{`Nivel 3: ${puntosCounter} pts`}</h2>
-                </div>
-                <h1>{`Total: ${puntosTotal} pts`}</h1>
-                <Link to='/'>
-                  <button
-                    style={{
-                      fontSize: '20px',
-                      margin: '10px',
-                      padding: '5px',
-                    }}
-                    onClick={() => {
-                      saveLocal();
-                      setWin(false);
-                      setPuntosTotal(0);
-                    }}
-                  >
-                    Finalizar
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ModalFinish
+            puntosCounter={puntosCounter}
+            puntosTotal={puntosTotal}
+            setWin={setWin}
+            setPuntosTotal={setPuntosTotal}
+          />
         )}
       </main>
     </div>

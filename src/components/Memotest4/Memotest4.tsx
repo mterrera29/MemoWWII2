@@ -67,7 +67,7 @@ const Memotest4 = () => {
   return (
     <div style={{ textAlign: 'center' }}>
       <Header />
-      <div>
+      <div style={{ height: '25px', fontSize: '15px' }}>
         <h2>Nivel 2</h2>
       </div>
       <main>

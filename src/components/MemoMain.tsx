@@ -9,7 +9,7 @@ import { usePointsStore } from '../store';
 const Main = () => {
   const [correct, setCorrect] = useState(false);
   const setPuntosTotal = usePointsStore((state) => state.setPuntosTotal);
-  const puntosPartida = usePointsStore((state) => state.puntosPartida);
+  const puntosRaw = localStorage.getItem('puntos');
 
   return (
     <div>
@@ -59,7 +59,7 @@ const Main = () => {
                 textAlign: 'center',
               }}
             >
-              <h2>Última partida: {puntosPartida} Pts. </h2>
+              <h2>Última partida: {puntosRaw} Pts. </h2>
               <Link style={{ textDecoration: 'none' }} to='/nivel1'>
                 <div
                   style={{
