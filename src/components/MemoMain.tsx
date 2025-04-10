@@ -42,7 +42,7 @@ const Main = () => {
               Líderes de la Segunda Guerra Mundial
             </h2>
             <div
-              style={{ marginTop: '10px' }}
+              style={{ marginTop: '10px', marginBottom: '10px' }}
               onClick={() => {
                 setCorrect(true);
                 setPuntosTotal(0);
@@ -59,7 +59,7 @@ const Main = () => {
                 textAlign: 'center',
               }}
             >
-              <h2>Última partida: {puntosRaw} Pts. </h2>
+              {puntosRaw && <h2>Última partida: {puntosRaw} Pts. </h2>}
               <Link style={{ textDecoration: 'none' }} to='/nivel1'>
                 <div
                   style={{
