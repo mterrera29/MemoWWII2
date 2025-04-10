@@ -1,54 +1,59 @@
-# React + TypeScript + Vite
+# 🧠 MemoWWII2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a **MemoWWII2**, un juego de memoria interactivo diseñado para ayudar a los estudiantes de secundaria a aprender sobre la Segunda Guerra Mundial de manera entretenida y educativa! A través de este juego, los alumnos pueden mejorar su conocimiento sobre eventos históricos clave mientras desarrollan habilidades cognitivas.
 
-Currently, two official plugins are available:
+| ![Pantalla Principal](./public/img/main.png) | ![Juego](./public/img/game.png) | ![Juego Responsivo](./public/img/game-responsive.png) |
+| -------------------------------------------- | ------------------------------- | ----------------------------------------------------- |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Características
 
-## Expanding the ESLint configuration
+- 🧩 **Juego de memoria educativo**: Emparejá cartas relacionadas con eventos, personajes y lugares significativos de la Segunda Guerra Mundial.
+- 📖 **Contenido histórico**: Cada par de cartas viene con información adicional para profundizar el aprendizaje.
+- 📱 **Diseño responsivo**: Compatible con computadoras, tablets y teléfonos móviles.
+- 🎨 **Interfaz amigable**: Diseñado para ser intuitivo y atractivo para estudiantes de secundaria.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🖥️ Demo en Producción
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+🔗 [**Accedé a la App**](https://memo-ww2.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologías utilizadas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **React**: Para una interfaz de usuario dinámica y eficiente.
+- **Vite**: Proporciona un entorno de desarrollo rápido y moderno.
+- **TypeScript**: Añade tipado estático para mejorar la calidad del código.
+- **CSS**: Estiliza la aplicación para una experiencia visual atractiva.
+- **ESLint**: Garantiza un código limpio y consistente.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🎯 Objetivo Educativo
+
+El objetivo principal de **MemoWWII2** es ofrecer a los estudiantes una forma interactiva y divertida de aprender sobre la Segunda Guerra Mundial, reforzando su memoria y comprensión de eventos históricos clave.
+
+## 📦 Cómo clonar y correr el proyecto
+
+Si querés correr esta app en tu máquina local, seguí estos pasos:
+
+1. **Clonar el repositorio**:
+
+   ```bash
+   git clone https://github.com/mterrera29/MemoWWII2.git
+   ```
+
+2. **Entrar al directorio del proyecto**:
+
+   ```bash
+   cd MemoWWII2
+   ```
+
+3. **Instalar las dependencias**:
+
+   ```bash
+   npm install
+   ```
+
+4. **Ejecutar el servidor de desarrollo**:
+
+   ```bash
+   npm run dev
+   ```
+
+   Luego, abrí tu navegador y entrá a `http://localhost:5173` para ver la app en acción.
