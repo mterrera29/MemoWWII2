@@ -67,7 +67,7 @@ const Main = () => {
                   }}
                 >
                   <ButtonImg>
-                    Jugar Nivel 1
+                    Nivel 1
                     <img
                       style={{ height: '80px', borderRadius: '10px' }}
                       src={img}
@@ -88,7 +88,7 @@ const Main = () => {
                   }}
                 >
                   <ButtonImg>
-                    Jugar Nivel 2
+                    Nivel 2
                     <img
                       style={{ height: '80px', borderRadius: '10px' }}
                       src={img2}
@@ -109,7 +109,7 @@ const Main = () => {
                   }}
                 >
                   <ButtonImg>
-                    Jugar Nivel 3
+                    Nivel 3
                     <img
                       style={{ height: '80px', borderRadius: '10px' }}
                       src={img3}
