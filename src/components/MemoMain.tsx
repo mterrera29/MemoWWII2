@@ -6,6 +6,10 @@ import ModalMemoMain from './MemoMain/ModalMemoMain';
 import Button from './Button/Button';
 import Header from './Header/Header';
 import { usePointsStore } from '../store';
+import img from '../images/nivel1.png';
+import img2 from '../images/nivel2.png';
+import img3 from '../images/nivel3.png';
+import ButtonImg from './ButtonImg/ButtonImg';
 const Main = () => {
   const [correct, setCorrect] = useState(false);
   const setPuntosTotal = usePointsStore((state) => state.setPuntosTotal);
@@ -50,16 +54,7 @@ const Main = () => {
             >
               <Button>Comenzar</Button>
             </div>
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-              }}
-            >
-              {puntosRaw && <h2>Última partida: {puntosRaw} Pts. </h2>}
+            <div className={styles.buttonsLevels}>
               <Link style={{ textDecoration: 'none' }} to='/nivel1'>
                 <div
                   style={{
@@ -71,7 +66,14 @@ const Main = () => {
                     setPuntosTotal(0);
                   }}
                 >
-                  <Button>Jugar Nivel 1</Button>
+                  <ButtonImg>
+                    Jugar Nivel 1
+                    <img
+                      style={{ height: '80px', borderRadius: '10px' }}
+                      src={img}
+                      alt=''
+                    />
+                  </ButtonImg>
                 </div>
               </Link>
               <Link to='/nivel2' style={{ textDecoration: 'none' }}>
@@ -85,7 +87,14 @@ const Main = () => {
                     setPuntosTotal(0);
                   }}
                 >
-                  <Button>Jugar Nivel 2</Button>
+                  <ButtonImg>
+                    Jugar Nivel 2
+                    <img
+                      style={{ height: '80px', borderRadius: '10px' }}
+                      src={img2}
+                      alt=''
+                    />
+                  </ButtonImg>
                 </div>
               </Link>
               <Link to='/nivel3' style={{ textDecoration: 'none' }}>
@@ -99,9 +108,17 @@ const Main = () => {
                     setPuntosTotal(0);
                   }}
                 >
-                  <Button>Jugar Nivel 3</Button>
+                  <ButtonImg>
+                    Jugar Nivel 3
+                    <img
+                      style={{ height: '80px', borderRadius: '10px' }}
+                      src={img3}
+                      alt=''
+                    />
+                  </ButtonImg>
                 </div>
               </Link>
+              {puntosRaw && <h2>Última partida: {puntosRaw} Pts. </h2>}
             </div>
           </div>
         </div>
