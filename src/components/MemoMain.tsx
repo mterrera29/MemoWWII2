@@ -52,7 +52,7 @@ const Main = () => {
                 setPuntosTotal(0);
               }}
             >
-              <Button>Comenzar</Button>
+              <Button>Comenzar el juego</Button>
             </div>
             <div className={styles.buttonsLevels}>
               <Link style={{ textDecoration: 'none' }} to='/nivel1'>
